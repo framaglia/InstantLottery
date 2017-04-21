@@ -71,7 +71,7 @@ public class LotteryServiceTest {
         winningList.add(3);
         winningList.add(2);
         winningList.add(2);
-        winningList.add(0);
+        winningList.add(2);
 
         losingList = new ArrayList<>();
         losingList.add(0);
