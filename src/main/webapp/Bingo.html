@@ -1,33 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script src="js/lotteryFunctions.js"></script>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <meta charset="utf-8">
-    <title>Lottery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+
+        /* Remove the jumbotron's default bottom margin */
+        .jumbotron {
+            margin-bottom: 0px;
+            background-color: burlywood;
+        }
+
+        .jumbotronSmall {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        /* Add a gray background color and some padding to the footer */
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+    </style>
 </head>
 <body>
-<form class="form-horizontal">
-<table class="table table-bordered table-condensed">
-    <tbody>
-    <tr>
-        <td><input id="a1" type="text" class="form-control" /></td>
-        <td><input id="a2" type="text" class="form-control" /></td>
-    </tr>
-    <tr>
-        <td><input id="b1" type="text" class="form-control" /></td>
-        <td><input id="b2" type="text" class="form-control" /></td>
-    </tr>
-    <tr>
-        <td><input id="c1" type="text" class="form-control" /></td>
-        <td><input id="c2" type="text" class="form-control" /></td>
-    </tr>
-    </tbody>
-</table>
-    <button type="button" onclick="restCall()">Click Me!</button>
-</form>
 
+<div class="jumbotron">
+    <div class="container text-center">
+        <h1>Instant Lottery</h1>
+        <p>It's your lucky day!</p>
+    </div>
+</div>
+
+<div class="jumbotronSmall center-block">
+    <button type="button" class="btn btn-primary btn-lg center-block" onclick="restCall()">Buy a Ticket!</button>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="panel panel-primary">
+                <div class="panel-body"><img src="img/qmark.png?150x80text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-primary">
+                <div class="panel-body"><img src="img/qmark.png?150x80text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-primary">
+                <div class="panel-body"><img src="img/qmark.png?150x80text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+            </div>
+        </div>
+    </div>
+</div><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="panel panel-primary">
+                <div class="panel-body"><img src="img/qmark.png?150x80text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-primary">
+                <div class="panel-body"><img src="img/qmark.png?150x80text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-primary">
+                <div class="panel-body"><img src="img/qmark.png?150x80text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
 </body>
 </html>
