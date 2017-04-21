@@ -8,15 +8,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import static com.igt.ilottery.api.LotteryRestController.BASE_PATH;
-
 /**
  * Class exposing REST API for instant lottery.
  *
  * @author Francesco Maria Maglia, Ringmaster, f.maglia@ringmaster.it
  */
 @RestController
-@RequestMapping(BASE_PATH)
+@RequestMapping
 @CrossOrigin
 public class LotteryRestController {
 
@@ -26,8 +24,8 @@ public class LotteryRestController {
     @Autowired
     private LotteryService lotteryService;
 
-    @RequestMapping(value = PURCHASE_TICKET_PATH, method = RequestMethod.GET)
-    public Ticket bet() {
+    @RequestMapping(value = BASE_PATH + PURCHASE_TICKET_PATH, method = RequestMethod.GET)
+    public Ticket purchase() {
         return lotteryService.extractTicket();
     }
 }
