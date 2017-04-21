@@ -1,13 +1,10 @@
 package com.igt.ilottery.service.impl;
 
 import com.igt.ilottery.model.Ticket;
-import com.igt.ilottery.rng.RandomNumberGenerator;
 import com.igt.ilottery.service.DrawingService;
 import com.igt.ilottery.service.LotteryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cglib.transform.impl.InterceptFieldCallback;
 import org.springframework.stereotype.Service;
-import sun.management.snmp.jvminstr.JvmThreadInstanceEntryImpl;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -29,12 +26,19 @@ public class LotteryServiceImpl implements LotteryService {
 
     public Ticket extractTicket() {
         List<Integer> drawnNumbers = drawer.draw(NUMBERS_TO_DRAW);
+        checkDrawIntegrity(drawnNumbers);
         List<Integer> frequencyList = new ArrayList<>();
         for(Integer drawnNumber : drawnNumbers) {
             frequencyList.add(Collections.frequency(drawnNumbers, drawnNumber));
         }
         boolean isWinning = Collections.max(frequencyList) >= WIN_THRESHOLD;
         return createTicket(drawnNumbers, isWinning);
+    }
+
+    private void checkDrawIntegrity(List<Integer> drawnNumbers) {
+        if(drawnNumbers.size() != NUMBERS_TO_DRAW) {
+            throw new IllegalStateException();
+        }
     }
 
     private Ticket createTicket(List<Integer> drawnNumbers, boolean isWinning) {
