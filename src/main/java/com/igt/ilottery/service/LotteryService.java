@@ -1,6 +1,5 @@
 package com.igt.ilottery.service;
 
-import com.igt.ilottery.model.Purchase;
 import com.igt.ilottery.model.Ticket;
 
 /**
