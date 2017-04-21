@@ -16,7 +16,7 @@ import java.util.List;
  * @author Francesco Maria Maglia, Ringmaster, f.maglia@ringmaster.it
  */
 @Service
-public class LotteryServiceImpl implements LotteryService {
+public class FourInARowLottery implements LotteryService {
 
     private static final int NUMBERS_TO_DRAW = 6;
     private static final int WIN_THRESHOLD = 4;
