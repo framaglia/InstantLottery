@@ -1,0 +1,23 @@
+.jumbotron {
+    padding-top: 10px;
+    margin-bottom: 0;
+    background-color: #545658;
+    color: white;
+}
+
+.jumbotronSmall {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.panel-success {
+    border: 4px solid #a1e971;
+}
+
+.panel-primary {
+    border: 4px solid #337ab7;
+}
+
+.panel-danger {
+    border: 4px solid #eb5453;
+}

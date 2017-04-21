@@ -5,28 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script src="js/lotteryFunctions.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-
-        /* Remove the jumbotron's default bottom margin */
-        .jumbotron {
-            background-color: burlywood;
-        }
-
-        .jumbotronSmall {
-            margin-top: 15px;
-            margin-bottom: 15px;
-        }
-
-        /* Add a gray background color and some padding to the footer */
-        footer {
-            background-color: #f2f2f2;
-            padding: 25px;
-        }
-    </style>
 </head>
 <body>
 
@@ -38,24 +21,24 @@
 </div>
 
 <div class="jumbotronSmall center-block">
-    <button type="button" class="btn btn-primary btn-lg center-block" onclick="restCall()">Buy a Ticket!</button>
+    <button id="button" type="button" class="btn btn-primary btn-lg center-block" onclick="restCall()">Buy a Ticket!</button>
 </div>
 
 
 <div class="container">
     <div class="row">
         <div class="col-sm-4">
-            <div class="panel panel-primary">
+            <div id="d1" class="panel panel-primary">
                 <div class="panel-body"><img id="a1" src="img/qmark.png?150x80" class="img-responsive" style="width:100%" alt="Image"></div>
             </div>
         </div>
         <div class="col-sm-4">
-            <div class="panel panel-primary">
+            <div id="d2" class="panel panel-primary">
                 <div class="panel-body"><img id="a2" src="img/qmark.png?150x80" class="img-responsive" style="width:100%" alt="Image"></div>
             </div>
         </div>
         <div class="col-sm-4">
-            <div class="panel panel-primary">
+            <div id="d3" class="panel panel-primary">
                 <div class="panel-body"><img id="a3"  src="img/qmark.png?150x80" class="img-responsive" style="width:100%" alt="Image"></div>
             </div>
         </div>
@@ -65,17 +48,17 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-4">
-            <div class="panel panel-primary">
+            <div id="d4" class="panel panel-primary">
                 <div class="panel-body"><img id="b1" src="img/qmark.png?150x80" class="img-responsive" style="width:100%" alt="Image"></div>
             </div>
         </div>
         <div class="col-sm-4">
-            <div class="panel panel-primary">
+            <div id="d5" class="panel panel-primary">
                 <div class="panel-body"><img id="b2" src="img/qmark.png?150x80" class="img-responsive" style="width:100%" alt="Image"></div>
             </div>
         </div>
         <div class="col-sm-4">
-            <div class="panel panel-primary">
+            <div id="d6" class="panel panel-primary">
                 <div class="panel-body"><img id="b3" src="img/qmark.png?150x80" class="img-responsive" style="width:100%" alt="Image"></div>
             </div>
         </div>
