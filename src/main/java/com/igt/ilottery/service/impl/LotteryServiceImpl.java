@@ -19,7 +19,7 @@ import java.util.List;
 public class LotteryServiceImpl implements LotteryService {
 
     private static final int NUMBERS_TO_DRAW = 6;
-    private static final int WIN_THRESHOLD = 3;
+    private static final int WIN_THRESHOLD = 4;
 
     @Autowired
     private DrawingService drawer;
