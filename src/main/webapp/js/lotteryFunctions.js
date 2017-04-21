@@ -25,7 +25,6 @@ function restCall () {
                 $("#d5").attr("class", "panel panel-danger");
                 $("#d6").attr("class", "panel panel-danger");
             }
-
         }
     });
 }
