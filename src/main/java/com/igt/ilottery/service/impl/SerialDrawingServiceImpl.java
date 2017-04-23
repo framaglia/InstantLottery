@@ -14,7 +14,7 @@ import java.util.List;
  * @author Francesco Maria Maglia, Ringmaster, f.maglia@ringmaster.it
  */
 @Service
-public class DrawingServiceImpl implements DrawingService {
+public class SerialDrawingServiceImpl implements DrawingService {
 
     @Autowired
     RandomNumberGenerator rng;

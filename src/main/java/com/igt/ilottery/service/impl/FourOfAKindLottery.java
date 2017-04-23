@@ -16,7 +16,7 @@ import java.util.List;
  * @author Francesco Maria Maglia, Ringmaster, f.maglia@ringmaster.it
  */
 @Service
-public class FourInARowLottery implements LotteryService {
+public class FourOfAKindLottery implements LotteryService {
 
     private static final int NUMBERS_TO_DRAW = 6;
     private static final int WIN_THRESHOLD = 4;
@@ -27,18 +27,21 @@ public class FourInARowLottery implements LotteryService {
     public Ticket extractTicket() {
         List<Integer> drawnNumbers = drawer.draw(NUMBERS_TO_DRAW);
         checkDrawIntegrity(drawnNumbers);
-        List<Integer> frequencyList = new ArrayList<>();
-        for(Integer drawnNumber : drawnNumbers) {
-            frequencyList.add(Collections.frequency(drawnNumbers, drawnNumber));
-        }
-        boolean isWinning = Collections.max(frequencyList) >= WIN_THRESHOLD;
-        return createTicket(drawnNumbers, isWinning);
+        return createTicket(drawnNumbers, checkForWin(drawnNumbers));
     }
 
     private void checkDrawIntegrity(List<Integer> drawnNumbers) {
         if(drawnNumbers.size() != NUMBERS_TO_DRAW) {
             throw new IllegalStateException();
         }
+    }
+
+    private boolean checkForWin(List<Integer> drawnNumbers) {
+        List<Integer> frequencyList = new ArrayList<>();
+        for(Integer drawnNumber : drawnNumbers) {
+            frequencyList.add(Collections.frequency(drawnNumbers, drawnNumber));
+        }
+        return Collections.max(frequencyList) >= WIN_THRESHOLD;
     }
 
     private Ticket createTicket(List<Integer> drawnNumbers, boolean isWinning) {

@@ -3,7 +3,7 @@ package com.igt.ilottery.model;
 import java.util.List;
 
 /**
- * TODO class description
+ * Class modelling a lottery ticket in the system.
  *
  * @author Francesco Maria Maglia, Ringmaster, f.maglia@ringmaster.it
  */

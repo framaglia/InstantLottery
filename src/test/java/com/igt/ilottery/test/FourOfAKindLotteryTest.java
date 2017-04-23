@@ -3,7 +3,7 @@ package com.igt.ilottery.test;
 import com.igt.ilottery.model.Ticket;
 import com.igt.ilottery.service.DrawingService;
 import com.igt.ilottery.service.LotteryService;
-import com.igt.ilottery.service.impl.FourInARowLottery;
+import com.igt.ilottery.service.impl.FourOfAKindLottery;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,11 +18,11 @@ import static org.mockito.Matchers.anyInt;
 import static org.mockito.Mockito.when;
 
 /**
- * Unit tests for {@link FourInARowLottery}
+ * Unit tests for {@link FourOfAKindLottery}
  *
  * @author Francesco Maria Maglia, Ringmaster, f.maglia@ringmaster.it
  */
-public class LotteryServiceTest {
+public class FourOfAKindLotteryTest {
 
     private List<Integer> winningList;
     private List<Integer> losingList;
@@ -39,7 +39,7 @@ public class LotteryServiceTest {
 
     @Before
     public void setup() {
-        lotteryService = new FourInARowLottery();
+        lotteryService = new FourOfAKindLottery();
         MockitoAnnotations.initMocks(this);
         setupLists();
     }

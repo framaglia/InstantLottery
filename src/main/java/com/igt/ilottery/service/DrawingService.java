@@ -9,5 +9,11 @@ import java.util.List;
  */
 public interface DrawingService {
 
+    /**
+     * Draws a certain amount of numbers.
+     *
+     * @param numbersToDraw How many numbers to draw.
+     * @return A list containing the drawn numbers.
+     */
     List<Integer> draw(int numbersToDraw);
 }
