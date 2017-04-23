@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: 'game_of_thronesregular';
-    src: url('../font/game_of_thrones-webfont.woff2') format('woff2'),
+    src: url('../font/game_of_thrones-webfont.woff2') format('woff2');
     url('../font/game_of_thrones-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -9,14 +9,19 @@
 
 .body {
     background-image: url("../img/bg.jpg");
-    font-family: 'game_of_thronesregular'
+    font-family: 'game_of_thronesregular';
 }
 .jumbotron {
     padding-top: 10px;
     padding-bottom: 15px;
     margin-bottom: 70px;
-    color: #da0a08;
-    background-color: rgba(255,0,0,0);
+    color: #676767;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.jumbotron h1 {
+    font-size: 63px;
+    word-spacing: 15px;
 }
 
 .jumbotronSmall {
@@ -28,7 +33,7 @@
     padding: 0;
 }
 
-.btn-primary {
+.btn-got {
     color: black;
     background-color: #676767;
     border-color: #676767;
@@ -36,7 +41,7 @@
     outline: none;
 }
 
-.btn-primary:hover {
+.btn-got:hover {
     color: black;
     background-color: #676767;
     border-color: #676767;
@@ -44,7 +49,7 @@
     outline: none;
 }
 
-.btn-primary:focus {
+.btn-got:focus {
     color: black;
     background-color: #676767;
     border-color: #676767;
@@ -52,7 +57,7 @@
     outline: none;
 }
 
-.btn:active {
+.btn-got:active {
     color: black;
     background-color: #676767;
     border-color: #676767;
