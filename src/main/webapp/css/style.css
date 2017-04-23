@@ -1,23 +1,77 @@
+
+@font-face {
+    font-family: 'game_of_thronesregular';
+    src: url('../font/game_of_thrones-webfont.woff2') format('woff2'),
+    url('../font/game_of_thrones-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.body {
+    background-image: url("../img/bg.jpg");
+    font-family: 'game_of_thronesregular'
+}
 .jumbotron {
     padding-top: 10px;
-    margin-bottom: 0;
-    background-color: #545658;
-    color: white;
+    padding-bottom: 15px;
+    margin-bottom: 70px;
+    color: #da0a08;
+    background-color: rgba(255,0,0,0);
 }
 
 .jumbotronSmall {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
+.panel-body {
+    padding: 0;
+}
+
+.btn-primary {
+    color: black;
+    background-color: #676767;
+    border-color: #676767;
+    border-bottom: 3px solid #414141;
+    outline: none;
+}
+
+.btn-primary:hover {
+    color: black;
+    background-color: #676767;
+    border-color: #676767;
+    border-bottom: 3px solid #414141;
+    outline: none;
+}
+
+.btn-primary:focus {
+    color: black;
+    background-color: #676767;
+    border-color: #676767;
+    border-bottom: 3px solid #414141;
+    outline: none;
+}
+
+.btn:active {
+    color: black;
+    background-color: #676767;
+    border-color: #676767;
+}
+
+.btn-group-lg > .btn, .btn-lg {
+    padding: 14px 20px;
+    font-size: 22px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
 .panel-success {
-    border: 4px solid #a1e971;
+    border: 4px solid #67972f;
 }
 
 .panel-primary {
-    border: 4px solid #337ab7;
+    border: 4px solid #676767;
 }
 
 .panel-danger {
-    border: 4px solid #eb5453;
+    border: 4px solid #da0a08;
 }
