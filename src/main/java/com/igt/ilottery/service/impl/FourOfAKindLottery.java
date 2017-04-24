@@ -11,7 +11,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Four of a kind lottery implementation. Same 4 out of 6 numbers should match to win the prize.
+ * Four of a kind lottery implementation.
+ * 4 out of 6 numbers should match to win the prize.
  *
  * @author Francesco Maria Maglia, Ringmaster, f.maglia@ringmaster.it
  */
