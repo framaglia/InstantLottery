@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Lottery Service implementation.
+ * Four of a kind lottery implementation.
  *
  * @author Francesco Maria Maglia, Ringmaster, f.maglia@ringmaster.it
  */
