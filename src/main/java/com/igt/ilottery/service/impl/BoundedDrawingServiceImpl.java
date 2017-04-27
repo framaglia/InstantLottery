@@ -14,16 +14,21 @@ import java.util.List;
  * @author Francesco Maria Maglia, Ringmaster, f.maglia@ringmaster.it
  */
 @Service
-public class SerialDrawingServiceImpl implements DrawingService {
+public class BoundedDrawingServiceImpl implements DrawingService {
 
     @Autowired
     RandomNumberGenerator rng;
 
     @Override
     public List<Integer> draw(int numbersToDraw) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public List<Integer> boundedDraw(int numbersToDraw, int bound) {
         List<Integer> drawnNumbers = new ArrayList<>();
         for(int actualDraw = 0; actualDraw < numbersToDraw; actualDraw++) {
-            drawnNumbers.add(rng.nextInt());
+            drawnNumbers.add(rng.nextIntInRange(bound));
         }
         return drawnNumbers;
     }

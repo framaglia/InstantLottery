@@ -46,21 +46,21 @@ public class FourOfAKindLotteryTest {
 
     @Test
     public void winningTicketTest() {
-        when(drawingService.draw(anyInt())).thenReturn(winningList);
+        when(drawingService.boundedDraw(anyInt(), anyInt())).thenReturn(winningList);
         Ticket winningTicket = lotteryService.extractTicket();
         Assert.assertTrue(winningTicket.isWinning());
     }
 
     @Test
     public void losingTicketTest() {
-        when(drawingService.draw(anyInt())).thenReturn(losingList);
+        when(drawingService.boundedDraw(anyInt(), anyInt())).thenReturn(losingList);
         Ticket losingTicket = lotteryService.extractTicket();
         Assert.assertFalse(losingTicket.isWinning());
     }
 
     @Test(expected = IllegalStateException.class)
     public void illegalStateOnDrawFailure() {
-        when(drawingService.draw(anyInt())).thenReturn(corruptedList);
+        when(drawingService.boundedDraw(anyInt(), anyInt())).thenReturn(corruptedList);
         lotteryService.extractTicket();
     }
 

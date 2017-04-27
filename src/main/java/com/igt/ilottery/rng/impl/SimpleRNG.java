@@ -13,10 +13,15 @@ import java.util.Random;
 @Service
 public class SimpleRNG implements RandomNumberGenerator {
 
-    private static final int BOUND = 6;
     private Random random = new Random();
 
+    @Override
     public int nextInt() {
-        return random.nextInt(BOUND);
+        return random.nextInt();
+    }
+
+    @Override
+    public int nextIntInRange(int bound) {
+        return random.nextInt(bound);
     }
 }

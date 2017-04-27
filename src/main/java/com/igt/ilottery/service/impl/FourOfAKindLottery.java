@@ -20,13 +20,14 @@ import java.util.List;
 public class FourOfAKindLottery implements LotteryService {
 
     private static final int NUMBERS_TO_DRAW = 6;
-    private static final int WIN_THRESHOLD = 4;
+    private static final int DRAW_BOUNDARY = 6;
 
     @Autowired
     private DrawingService drawer;
 
+    @Override
     public Ticket extractTicket() {
-        List<Integer> drawnNumbers = drawer.draw(NUMBERS_TO_DRAW);
+        List<Integer> drawnNumbers = drawer.boundedDraw(NUMBERS_TO_DRAW, DRAW_BOUNDARY);
         checkDrawIntegrity(drawnNumbers);
         return createTicket(drawnNumbers, checkForWin(drawnNumbers));
     }
@@ -42,7 +43,7 @@ public class FourOfAKindLottery implements LotteryService {
         for(Integer drawnNumber : drawnNumbers) {
             frequencyList.add(Collections.frequency(drawnNumbers, drawnNumber));
         }
-        return Collections.max(frequencyList) >= WIN_THRESHOLD;
+        return Collections.max(frequencyList) >= 4;
     }
 
     private Ticket createTicket(List<Integer> drawnNumbers, boolean isWinning) {
