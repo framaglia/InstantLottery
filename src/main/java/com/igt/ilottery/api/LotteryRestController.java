@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Francesco Maria Maglia, Ringmaster, f.maglia@ringmaster.it
  */
 @RestController
-@RequestMapping
 @CrossOrigin
 public class LotteryRestController {
 
