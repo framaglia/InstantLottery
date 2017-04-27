@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Serial Drawing implementation.
+ * Bounded Drawing implementation.
  *
  * @author Francesco Maria Maglia, Ringmaster, f.maglia@ringmaster.it
  */
