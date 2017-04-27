@@ -4,5 +4,8 @@ A simple lottery system made using Spring technologies (IoC, REST) and tested wi
 
 ![alt losing ticket](https://github.com/pollaiolo/InstantLottery/blob/master/screen/GoL.png)
 
-## How to build
+## How to Build
 The project use Maven as building system. Just clone the project and do a ```mvn clean install```
+
+## How to Run
+The building process produce a ```war``` file that can be deployed on your preferred AS (e.g. Tomcat).
