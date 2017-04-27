@@ -34,7 +34,7 @@ public class FourOfAKindLottery extends AbstractLottery {
 
     @Override
     protected void checkDrawIntegrity(List<Integer> drawnNumbers) {
-        if(drawnNumbers.size() != NUMBERS_TO_DRAW || drawOutOfBounds(drawnNumbers)) {
+        if(drawnNumbers.size() != NUMBERS_TO_DRAW || isDrawOutOfBounds(drawnNumbers)) {
             throw new IllegalStateException();
         }
     }
@@ -48,7 +48,7 @@ public class FourOfAKindLottery extends AbstractLottery {
         return Collections.max(frequencyList) >= 4;
     }
 
-    private boolean drawOutOfBounds(List<Integer> drawnNumbers) {
+    private boolean isDrawOutOfBounds(List<Integer> drawnNumbers) {
         for(Integer i : drawnNumbers) {
             if(i >= DRAW_BOUNDARY) {
                 return true;
