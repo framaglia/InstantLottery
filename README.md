@@ -1,6 +1,6 @@
 # Instant Lottery
 Talk purpose project.
-A simple lottery system made using Spring technologies (IoC, REST) and tested with Mockito framework. Lottery winning condition is **4 of a kind**.
+A simple lottery system made using **Spring** technologies (IoC, REST) and tested with **Mockito** framework. Lottery winning condition is **4 of a kind**.
 
 ![alt losing ticket](https://github.com/pollaiolo/InstantLottery/blob/master/screen/GoL.png)
 
