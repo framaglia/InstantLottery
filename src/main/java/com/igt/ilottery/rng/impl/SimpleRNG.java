@@ -13,7 +13,7 @@ import java.util.Random;
 @Service
 public class SimpleRNG implements RandomNumberGenerator {
 
-    private Random random = new Random();
+    private static final Random random = new Random();
 
     @Override
     public int nextInt() {
