@@ -39,7 +39,7 @@ public class FourOfAKindLotteryTest {
 
     @Before
     public void setup() {
-        lotteryService = new FourOfAKindLottery();
+        lotteryService = new FourOfAKindLottery(drawingService);
         MockitoAnnotations.initMocks(this);
         setupLists();
     }
@@ -87,6 +87,7 @@ public class FourOfAKindLotteryTest {
         corruptedList.add(0);
         corruptedList.add(0);
         corruptedList.add(1);
+        corruptedList.add(6);
     }
 
 }

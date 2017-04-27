@@ -13,7 +13,7 @@ import java.util.List;
  *
  * @author Francesco Maria Maglia, Ringmaster, f.maglia@ringmaster.it
  */
-@Service
+@Service(value = "boundedDrawer")
 public class BoundedDrawingServiceImpl implements DrawingService {
 
     @Autowired
