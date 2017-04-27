@@ -12,7 +12,7 @@ import java.util.List;
 public abstract class AbstractLottery implements LotteryService {
 
     /**
-     * Delegates the draw mechanism to a service.
+     * Delegates the draw mechanism to an external service.
      * Actual draw service should be provided when extending this class.
      */
     protected DrawingService drawer;

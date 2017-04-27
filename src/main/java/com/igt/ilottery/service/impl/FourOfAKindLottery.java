@@ -35,7 +35,7 @@ public class FourOfAKindLottery extends AbstractLottery {
     @Override
     protected void checkDrawIntegrity(List<Integer> drawnNumbers) {
         if(drawnNumbers.size() != NUMBERS_TO_DRAW || isDrawOutOfBounds(drawnNumbers)) {
-            throw new IllegalStateException();
+            throw new IllegalStateException("Drawing system failure");
         }
     }
 
