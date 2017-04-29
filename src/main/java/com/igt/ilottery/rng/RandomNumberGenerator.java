@@ -18,7 +18,7 @@ public interface RandomNumberGenerator {
      * Generates a number in a given range using a random function.
      *
      * @param bound The boundary of the random extraction.
-     * @return
+     * @return The generated integers in range.
      */
     int nextIntInRange(int bound);
 }
