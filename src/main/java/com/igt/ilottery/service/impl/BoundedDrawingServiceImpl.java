@@ -1,6 +1,7 @@
 package com.igt.ilottery.service.impl;
 
 import com.igt.ilottery.rng.RandomNumberGenerator;
+import com.igt.ilottery.rng.impl.SimpleRNG;
 import com.igt.ilottery.service.DrawingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ import java.util.List;
  *
  * @author Francesco Maria Maglia, Ringmaster, f.maglia@ringmaster.it
  */
-@Service(value = "boundedDrawer")
+@Service
 public class BoundedDrawingServiceImpl implements DrawingService {
 
     @Autowired

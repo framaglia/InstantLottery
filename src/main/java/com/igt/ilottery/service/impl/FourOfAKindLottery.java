@@ -23,7 +23,7 @@ public class FourOfAKindLottery extends AbstractLottery {
     private static final int DRAW_BOUNDARY = 6;
 
     @Autowired
-    public FourOfAKindLottery(@Qualifier("boundedDrawer") DrawingService drawingService) {
+    public FourOfAKindLottery(DrawingService drawingService) {
         this.drawer = drawingService;
     }
 
