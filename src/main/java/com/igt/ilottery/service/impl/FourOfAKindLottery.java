@@ -21,6 +21,7 @@ public class FourOfAKindLottery extends AbstractLottery {
 
     private static final int NUMBERS_TO_DRAW = 6;
     private static final int DRAW_BOUNDARY = 6;
+    private static final int WINNING_THRESHOLD = 4;
 
     @Autowired
     public FourOfAKindLottery(DrawingService drawingService) {
@@ -45,7 +46,7 @@ public class FourOfAKindLottery extends AbstractLottery {
         for(Integer drawnNumber : drawnNumbers) {
             frequencyList.add(Collections.frequency(drawnNumbers, drawnNumber));
         }
-        return Collections.max(frequencyList) >= 4;
+        return Collections.max(frequencyList) >= WINNING_THRESHOLD;
     }
 
     private boolean isDrawOutOfBounds(List<Integer> drawnNumbers) {

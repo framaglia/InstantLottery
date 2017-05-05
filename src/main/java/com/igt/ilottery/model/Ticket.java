@@ -7,30 +7,22 @@ import java.util.List;
  *
  * @author Francesco Maria Maglia, Ringmaster, f.maglia@ringmaster.it
  */
-public class Ticket {
+public abstract class Ticket {
 
     private List<Integer> drawnNumbers;
 
-    private boolean isWinning;
+    protected boolean isWinning;
 
-    public Ticket(List<Integer> drawnNumbers, boolean isWinning) {
+    public Ticket(List<Integer> drawnNumbers) {
         this.drawnNumbers = drawnNumbers;
-        this.isWinning = isWinning;
     }
 
     public List<Integer> getDrawnNumbers() {
         return drawnNumbers;
     }
 
-    public void setDrawnNumbers(List<Integer> drawnNumbers) {
-        this.drawnNumbers = drawnNumbers;
-    }
-
     public boolean isWinning() {
         return isWinning;
     }
 
-    public void setWinning(boolean winning) {
-        isWinning = winning;
-    }
 }

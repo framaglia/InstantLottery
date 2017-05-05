@@ -1,6 +1,8 @@
 package com.igt.ilottery.service;
 
+import com.igt.ilottery.model.LosingTicket;
 import com.igt.ilottery.model.Ticket;
+import com.igt.ilottery.model.WinningTicket;
 
 import java.util.List;
 
@@ -21,7 +23,11 @@ public abstract class AbstractLottery implements LotteryService {
     public Ticket extractTicket() {
         List<Integer> drawnNumbers = draw();
         checkDrawIntegrity(drawnNumbers);
-        return new Ticket(drawnNumbers, isWinningDraw(drawnNumbers));
+        if(isWinningDraw(drawnNumbers)) {
+            return new WinningTicket(drawnNumbers);
+        } else {
+            return new LosingTicket(drawnNumbers);
+        }
     }
 
     protected abstract List<Integer> draw();
